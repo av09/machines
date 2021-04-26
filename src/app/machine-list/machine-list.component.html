@@ -1,0 +1,22 @@
+<section class="list">
+  <h1 class="list__title">List of Machines</h1>
+  <section class="list__container">
+    <article class="list__heading">
+        <p>Id</p>
+        <p>Install Date</p>
+        <p>Last Maintenance</p>
+        <p>Floor</p>
+        <p>Status</p>
+    </article>
+
+    <article class="list__item" *ngFor="let machine of machines">
+      <a class="item" [title]="machine.id + ' details'">
+        <p class="item__id">{{ machine.id }}</p>
+        <p class="item__installation-date">{{ machine.install_date }}</p>
+        <p class="item__last-maintenance">{{ machine.last_maintenance }}</p>
+        <p class="item__last-floor">{{ machine.floor }}</p>
+        <p class="item__status" [ngStyle]="{'color': machine.status | status}">{{ machine.status | titlecase }}</p>
+      </a>
+    </article>
+  </section>
+</section>

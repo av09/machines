@@ -1,0 +1,3 @@
+interface MachineResponse {
+  data: Machine[];
+}

@@ -1,0 +1,19 @@
+.list__title {
+  text-align: center;
+}
+
+.item,
+.list__heading {
+  display: flex;
+  text-align: center;
+
+  p {
+    flex-basis: 25%;
+  }
+}
+
+.list__heading {
+  p {
+    font-weight: bold;
+  }
+}
